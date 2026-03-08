@@ -4,6 +4,9 @@
   nix = {
     settings = {
       auto-optimise-store = true;
+      max-jobs = 8;
+      cores = 2;
+      download-buffer-size = 268435456;
       experimental-features = [
         "nix-command"
         "flakes"
@@ -28,7 +31,7 @@
     git
   ];
 
-  time.timeZone = "Europe/Paris";
+  time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "26.05";

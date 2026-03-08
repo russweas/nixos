@@ -1,18 +1,16 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  imports = [ inputs.zen-browser.homeModules.beta ];
+  programs.firefox.enable = true;
 
-  programs.zen-browser.enable = true;
+  catppuccin.firefox = {
+    enable = true;
+    flavor = "mocha";
+    accent = "blue";
+  };
 
   xdg.mimeApps =
     let
-      value =
-        let
-          system = pkgs.stdenv.hostPlatform.system;
-          zen-browser = inputs.zen-browser.packages.${system}.beta;
-        in
-        zen-browser.meta.desktopFileName;
-
+      value = "firefox.desktop";
       associations = builtins.listToAttrs (
         map (name: { inherit name value; }) [
           "application/x-extension-shtml"

@@ -2,13 +2,13 @@
 {
   home.packages = with pkgs; [
     ## Utils
-    # gamemode
+    gamemode
     # gamescope
     # winetricks
     # inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
     ## Minecraft
-    # prismlauncher
+    prismlauncher
 
     ## Cli games
     _2048

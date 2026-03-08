@@ -6,4 +6,7 @@
   xdg.configFile."rofi/config.rasi".source = ./config.rasi;
 
   xdg.configFile."rofi/powermenu-theme.rasi".source = ./powermenu-theme.rasi;
+
+  home.file.".local/share/applications/mullvad.desktop".source =
+    ./mullvad.desktop;
 }

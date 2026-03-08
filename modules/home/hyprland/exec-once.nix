@@ -18,7 +18,7 @@
     "init-wallpaper &"
 
     "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
-    "[workspace 1 silent] zen-beta"
+    "[workspace 1 silent] firefox"
     "[workspace 2 silent] ghostty"
   ];
 }

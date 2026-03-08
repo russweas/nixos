@@ -2,12 +2,15 @@
 {
   home.packages = with pkgs; [
     ## Lsp
-    nixd # nix
+    nil # nix
+
+    ## AI
+    claude-code
 
     ## formating
+    nixfmt
     shfmt
     treefmt
-    nixfmt
 
     ## C / C++
     gcc
@@ -16,7 +19,7 @@
     cmake
     gnumake
     valgrind
-    llvmPackages_20.clang-tools
+    clang-tools
 
     ## Python
     python3

@@ -1,9 +1,13 @@
-{ host, ... }:
+{ pkgs, host, ... }:
 {
   programs.kitty = {
     enable = true;
 
-    themeFile = "gruvbox-dark-hard";
+    # Use a built-in theme that exists in kitty-themes
+    theme = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/dexpesta/kitty-themes/master/themes/Catppuccin-Mocha.conf";
+      sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    };
 
     font = {
       name = "Maple Mono";
@@ -31,10 +35,10 @@
       inactive_tab_font_style = "normal";
       tab_bar_style = "powerline";
       tab_powerline_style = "angled";
-      active_tab_foreground = "#FBF1C7";
-      active_tab_background = "#7C6F64";
-      inactive_tab_foreground = "#FBF1C7";
-      inactive_tab_background = "#3C3836";
+      active_tab_foreground = "#cdd6f4";
+      active_tab_background = "#313244";
+      inactive_tab_foreground = "#cdd6f4";
+      inactive_tab_background = "#1e1e2e";
     };
 
     keybindings = {

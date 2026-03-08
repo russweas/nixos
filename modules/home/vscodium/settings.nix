@@ -10,7 +10,7 @@
       "editor.fontFamily" = "'Maple Mono', 'SymbolsNerdFont', 'monospace', monospace";
       "terminal.integrated.fontFamily" = "'Maple Mono', 'SymbolsNerdFont'";
       "editor.fontSize" = 18;
-      "workbench.colorTheme" = "Gruvbox Dark Hard";
+      "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.iconTheme" = "gruvbox-material-icon-theme";
       "material-icon-theme.folders.theme" = "classic";
       "vsicons.dontShowNewVersionMessage" = true;
@@ -61,15 +61,15 @@
       "zig.zls.enableBuildOnSave" = true;
       "zig.zls.buildOnSaveArgs" = [ ];
 
-      "nix.serverPath" = "nixd";
+      "nix.serverPath" = "nil";
       "nix.enableLanguageServer" = true;
-      # "nix.serverSettings" = {
-      #   "nixd" = {
-      #     "formatting" = {
-      #       "command" = [ "nixfmt" ];
-      #     };
-      #   };
-      # };
+      "nix.serverSettings" = {
+        "nil" = {
+          "formatting" = {
+            "command" = [ "nixfmt" ];
+          };
+        };
+      };
     };
   };
 }

@@ -4,7 +4,7 @@
     gvfs.enable = true;
 
     gnome = {
-      tinysparql.enable = true;
+      tinysparql.enable = false;
       gnome-keyring.enable = true;
     };
 
@@ -23,5 +23,10 @@
     };
 
     udisks2.enable = true;
+
+    jellyfin = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }

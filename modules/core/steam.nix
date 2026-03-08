@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  programs.gamemode = {
+    enable = true;
+    enableRenice = true;
+  };
+
   programs = {
     steam = {
       enable = false;

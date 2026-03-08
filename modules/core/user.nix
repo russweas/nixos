@@ -12,11 +12,9 @@
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
-      imports =
-        if (host == "desktop") then
-          [ ./../home/default.desktop.nix ]
-        else
-          [ ./../home ];
+      imports = [
+        (if (host == "desktop") then ./../home/default.desktop.nix else ./../home)
+      ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "26.05";
@@ -32,7 +30,7 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
   nix.settings.allowed-users = [ "${username}" ];
 }

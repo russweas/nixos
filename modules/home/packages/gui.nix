@@ -4,6 +4,7 @@
     ## Multimedia
     audacity
     gimp
+    jellyfin-media-player
     media-downloader
     obs-studio
     pavucontrol
@@ -11,9 +12,17 @@
     video-trimmer
     vlc
 
+    ## VPN & Network
+    mullvad-vpn
+    mullvad-browser
+    qbittorrent
+
     ## Office
     libreoffice
     gnome-calculator
+
+    ## Security
+    _1password-gui
 
     ## Utility
     dconf-editor

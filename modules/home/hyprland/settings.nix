@@ -10,7 +10,7 @@
       repeat_delay = 300;
       numlock_by_default = true;
 
-      follow_mouse = 0;
+      follow_mouse = 1;
       mouse_refocus = 0;
       float_switch_override_focus = 0;
 
@@ -27,7 +27,7 @@
       gaps_out = 12;
       border_size = 2;
 
-      "col.active_border" = "rgb(98971A) rgb(CC241D) 45deg";
+      "col.active_border" = "rgb(89B4FA) rgb(CBA6F7) 45deg";
       "col.inactive_border" = "0x00000000";
     };
 
@@ -39,6 +39,7 @@
       middle_click_paste = false;
 
       disable_autoreload = false;
+      vrr = 1;
     };
 
     dwindle = {
@@ -59,15 +60,15 @@
 
         size = 3;
         noise = 0;
-        passes = 2;
+        passes = 1;
         contrast = 1.4;
         brightness = 1;
 
-        xray = true;
+        xray = false;
       };
 
       shadow = {
-        enabled = true;
+        enabled = false;
 
         range = 20;
         render_power = 3;

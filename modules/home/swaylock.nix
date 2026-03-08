@@ -23,27 +23,27 @@
 
       font = "Maple Mono";
 
-      text-wrong-color = "FBF1C7FF";
-      text-ver-color = "FBF1C7FF";
-      text-clear-color = "FBF1C7FF";
-      key-hl-color = "fabd2fFF";
-      bs-hl-color = "fb4934FF";
-      ring-clear-color = "d65d0eFF";
-      ring-wrong-color = "cc241dff";
-      ring-ver-color = "b8bb26FF";
-      ring-color = "689d6aff";
+      text-wrong-color = "CDD6F4FF";
+      text-ver-color = "CDD6F4FF";
+      text-clear-color = "CDD6F4FF";
+      text-color = "CDD6F4FF";
+      key-hl-color = "F9E2AFFF";
+      bs-hl-color = "F38BA8FF";
+      ring-clear-color = "A6E3A1FF";
+      ring-wrong-color = "F38BA8FF";
+      ring-ver-color = "A6E3A1FF";
+      ring-color = "89B4FAFF";
       line-clear-color = "FFFFFF00";
       line-ver-color = "FFFFFF00";
       line-wrong-color = "FFFFFF00";
       separator-color = "FFFFFF00";
       line-color = "FFFFFF00";
-      text-color = "FBF1C7FF";
-      inside-color = "3C3836DD";
-      inside-ver-color = "3C3836DD";
-      inside-clear-color = "3C3836DD";
-      inside-wrong-color = "3C3836DD";
+      inside-color = "1E1E2EDD";
+      inside-ver-color = "1E1E2EDD";
+      inside-clear-color = "1E1E2EDD";
+      inside-wrong-color = "1E1E2EDD";
       layout-bg-color = "FFFFFF00";
-      layout-text-color = "FBF1C7FF";
+      layout-text-color = "CDD6F4FF";
     };
   };
 }

@@ -28,13 +28,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     superfile.url = "github:yorukot/superfile";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake/beta";
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
     { nixpkgs, self, ... }@inputs:
     let
-      username = "frostphoenix";
+      username = "rweas";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
@@ -43,6 +44,11 @@
       lib = nixpkgs.lib;
     in
     {
+      formatter.${system} = pkgs.treefmt;
+
+      packages.${system}.iso =
+        self.nixosConfigurations.iso.config.system.build.isoImage;
+
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
@@ -66,6 +72,15 @@
           specialArgs = {
             host = "vm";
             inherit self inputs username;
+          };
+        };
+        iso = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/iso ];
+          specialArgs = {
+            host = "iso";
+            inherit self inputs username;
+            inherit nixpkgs;
           };
         };
       };

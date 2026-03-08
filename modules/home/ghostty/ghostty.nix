@@ -2,9 +2,13 @@
 {
   programs.ghostty = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
 
     settings = {
+      ##### Shell #####
+      shell-integration = "fish";
+      command = "fish";
+
       ##### Font #####
       font-family = [
         "Maple Mono"
@@ -18,7 +22,7 @@
       ];
 
       ##### Theme #####
-      theme = "gruvbox";
+      theme = "catppuccin-mocha";
       background-opacity = 0.5;
       adjust-cursor-thickness = 1;
 
@@ -38,7 +42,7 @@
 
       bell-features = "no-attention,no-audio,no-system,no-title,no-border";
 
-      gtk-single-instance = false;
+      gtk-single-instance = true;
       gtk-tabs-location = "bottom";
       gtk-wide-tabs = false;
       gtk-custom-css = "styles/tabs.css";
@@ -71,36 +75,38 @@
 
         "shift+page_down=scroll_page_down"
         "shift+page_up=scroll_page_up"
+
+        "ctrl+shift+r=reload_config"
       ];
     };
 
-    themes.gruvbox = {
-      background = "1d2021";
-      foreground = "fbf1c7";
+    themes.catppuccin-mocha = {
+      background = "1e1e2e";
+      foreground = "cdd6f4";
 
-      cursor-color = "D5C4A1";
+      cursor-color = "f5a97f";
 
       selection-background = "cell-foreground";
       selection-foreground = "cell-background";
 
       palette = [
-        "0=32302f"
-        "1=cc241d"
-        "2=98971a"
-        "3=d79921"
-        "4=458588"
-        "5=b16286"
-        "6=689d6a"
-        "7=ebdbb2"
+        "0=1e1e2e"
+        "1=f38ba8"
+        "2=a6e3a1"
+        "3=f9e2af"
+        "4=89b4fa"
+        "5=cba6f7"
+        "6=94e2d5"
+        "7=cdd6f4"
 
-        "8=928374"
-        "9=fb4934"
-        "10=b8bb26"
-        "11=fabd2f"
-        "12=83a598"
-        "13=d3869b"
-        "14=8ec07c"
-        "15=fbf1c7"
+        "8=45475a"
+        "9=f38ba8"
+        "10=a6e3a1"
+        "11=f9e2af"
+        "12=89b4fa"
+        "13=cba6f7"
+        "14=94e2d5"
+        "15=f5c2e7"
       ];
     };
   };

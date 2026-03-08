@@ -25,4 +25,11 @@
   };
 
   environment.systemPackages = with pkgs; [ networkmanagerapplet ];
+
+  services.tailscale.enable = false;
+
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 }

@@ -10,21 +10,11 @@
       # show keybinds list
       "$mod, F1, exec, show-keybinds"
 
-      # keybindings
-      "$mod, Return, exec, ghostty --gtk-single-instance=true"
-      "ALT, Return, exec, [float; size 1111 700] ghostty"
-      "$mod SHIFT, Return, exec, [fullscreen] ghostty"
-      "$mod, B, exec, [workspace 1 silent] zen-beta"
-      "$mod, Q, killactive,"
-      "$mod, F, fullscreen, 0"
-      "$mod SHIFT, F, fullscreen, 1"
-      "$mod, Space, exec, toggle-float"
-      "$mod, D, exec, toggle-rofi rofi -show drun"
-      "$mod SHIFT, D, exec, vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
-      "$mod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
-      "$mod, Escape, exec, swaylock"
+      # system menu & lock
+      "$mod, Escape, exec, power-menu"
+      "$mod CTRL, L, exec, hyprlock"
       "ALT, Escape, exec, hyprlock"
-      "$mod SHIFT, Escape, exec, power-menu"
+      "$mod SHIFT, Escape, exec, swaylock"
       "$mod, P, pseudo,"
       "$mod, X, togglesplit,"
       "$mod, T, exec, toggle-oppacity"
@@ -95,10 +85,8 @@
       "$mod CTRL, c, movetoworkspace, empty"
 
       # window control
-      "$mod SHIFT, left, movewindow, l"
-      "$mod SHIFT, right, movewindow, r"
-      "$mod SHIFT, up, movewindow, u"
-      "$mod SHIFT, down, movewindow, d"
+      "$mod, Q, killactive,"
+      "$mod, F, fullscreen, 1"
       "$mod SHIFT, h, movewindow, l"
       "$mod SHIFT, j, movewindow, d"
       "$mod SHIFT, k, movewindow, u"
@@ -134,6 +122,16 @@
 
       # clipboard manager
       "$mod, V, exec, toggle-rofi \"cliphist list | rofi -dmenu -theme-str 'window {width: 50%;} listview {columns: 1;}' | cliphist decode | wl-copy\""
+
+      # cycle backgrounds
+      "$mod CTRL, Space, exec, wall-change"
+
+      # application shortcuts
+      "$mod SHIFT, O, exec, obsidian"
+      "$mod SHIFT, slash, exec, show-keybinds"
+      "$mod SHIFT, A, exec, 1password"
+      "$mod, return, exec, ghostty"
+      "$mod, D, exec, rofi -show drun"
     ];
 
     # mouse binding
