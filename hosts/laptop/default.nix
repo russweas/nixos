@@ -19,9 +19,12 @@
   services.printing.enable = true;
 
   boot = {
-    initrd.luks.devices."cryptroot" = {
-      device = "/dev/disk/by-uuid/be3ff686-2308-48d4-acf1-983fc074edbe";
-      allowDiscards = true;
+    initrd = {
+      kernelModules = [ "amdgpu" ];
+      luks.devices."cryptroot" = {
+        device = "/dev/disk/by-uuid/be3ff686-2308-48d4-acf1-983fc074edbe";
+        allowDiscards = true;
+      };
     };
 
     plymouth = {
@@ -31,5 +34,10 @@
 
     # "splash" activates Plymouth; "quiet" is already set in bootloader.nix
     kernelParams = [ "splash" ];
+  };
+
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
   };
 }
