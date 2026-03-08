@@ -22,7 +22,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/761317bf-c727-4d12-b663-bc8eaa0227cc";
+    device = "/dev/mapper/cryptroot";
     fsType = "ext4";
   };
 
