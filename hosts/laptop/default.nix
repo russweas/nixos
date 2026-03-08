@@ -19,10 +19,8 @@
   services.printing.enable = true;
 
   boot = {
-    # LUKS encrypted root — update UUID to match your LUKS partition
-    # (run `blkid /dev/<your-luks-partition>` to find it)
     initrd.luks.devices."cryptroot" = {
-      device = "/dev/disk/by-uuid/761317bf-c727-4d12-b663-bc8eaa0227cc";
+      device = "/dev/disk/by-uuid/be3ff686-2308-48d4-acf1-983fc074edbe";
       allowDiscards = true;
     };
 
